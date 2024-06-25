@@ -1,0 +1,5 @@
+{
+    "python.formatting.blackPath": "/opt/homebrew/Caskroom/miniforge/base/bin/black",
+    "python.formatting.provider": "black",
+    "coc.preferences.formatOnType": true
+}
