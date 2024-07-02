@@ -11,12 +11,17 @@ call plug#begin()
  Plug 'rhysd/vim-clang-format'
  Plug 'vim-airline/vim-airline'
  Plug 'vim-airline/vim-airline-themes'
- Plug 'dart-lang/dart-vim-plugin'
  Plug 'junegunn/fzf.vim'
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
 
-let g:airline_theme='solarized_flood'
+"let g:airline_theme='solarized_flood'
+let g:airline_theme='papercolor'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+
 let g:copilot_node_command="/opt/homebrew/bin/node"
 
 set nocompatible            " disable compatibility to old-time vi
