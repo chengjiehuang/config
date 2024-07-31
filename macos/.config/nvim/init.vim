@@ -13,6 +13,9 @@ call plug#begin()
  Plug 'vim-airline/vim-airline-themes'
  Plug 'junegunn/fzf.vim'
  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+ Plug 'glepnir/zephyr-nvim'
+ Plug 'mhartington/oceanic-next'
 call plug#end()
 
 "let g:airline_theme='solarized_flood'
@@ -21,6 +24,13 @@ let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if (has("termguicolors"))
+  set termguicolors
+endif
+syntax enable
+colorscheme zephyr
 
 let g:copilot_node_command="/opt/homebrew/bin/node"
 
@@ -235,3 +245,4 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+lua require('config/treesitter')
