@@ -1,0 +1,5 @@
+{
+    "python.formatting.blackPath": "/home/chengjie/.local/miniconda3/bin/black",
+    "python.formatting.provider": "black",
+    "coc.preferences.formatOnType": true
+}
